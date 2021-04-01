@@ -6,18 +6,18 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item active px-lg-4">
+          <li class="nav-item {{request()->path() === '/' ? 'active' : ''}} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="/">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item px-lg-4">
+          <li class="nav-item {{request()->path() === 'about' ? 'active' : ''}} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="/about">About</a>
           </li>
-          <li class="nav-item px-lg-4">
+          <li class="nav-item {{request()->path() === 'products' ? 'active' : ''}} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="/products">Products</a>
           </li>
-          <li class="nav-item px-lg-4">
+          <li class="nav-item {{request()->path() === 'store' ? 'active' : ''}} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="/store">Store</a>
           </li>
         </ul>
