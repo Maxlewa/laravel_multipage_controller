@@ -12,14 +12,12 @@
               <span class="section-heading-lower">{{$varStore[0]->sousTitre}}</span>
             </h2>
             <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
-
               @foreach ($varStore[0]->OpenHours as $key=>$day)
-              <li class="list-unstyled-item list-hours-item d-flex {{ date('D') === $key ? 'today' : '' }}">
-                  {{ $day[0] }} 
-                  <span class="ml-auto">{{ $day[1] }} </span>
+              <li class="list-unstyled-item list-hours-item d-flex {{date('D') === $key ? 'today' : ''}}">
+                  {{$day[0]}} 
+                  <span class="ml-auto">{{$day[1]}} </span>
               </li>
               @endforeach
-
             </ul>
             <p class="address mb-5">
               <em>
